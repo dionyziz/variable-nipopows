@@ -1,0 +1,15 @@
+\section{Introduction}
+
+Traditional blockchain full nodes download the whole blockchain to synchronize
+with their network. The first improvement over this was put forth in the
+original Bitcoin paper in the form of SPV clients, which download only block
+headers, but still require a download linear in the size of the blockchain.
+Superlight clients implement the Non-Interactive Proof of Proof-of-Work
+(NIPoPoWs) primitive to download data exponentially smaller than SPV clients,
+observing only a logarithmic sample of blocks from the whole chain. Previous
+work has only implemented NIPoPoWs for the case of fixed difficulty. However,
+practical blockchains have difficulty which is recalculated in every epoch. We
+study the problem of creating superlight clients in the variable difficulty
+model.
+
+\import{./}{related.tex}

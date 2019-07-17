@@ -1,0 +1,21 @@
+\noindent
+\textbf{Related work.}
+The first interactive Proof of Proof-of-Work scheme was presented
+in~\cite{popow}. The Non-Interactive Proofs of Proof-of-Work (NIPoPoWs)
+primitive was introduced in~\cite{nipopow}, in which a superblock-based
+construction was also introduced. Their superblock NIPoPoWs are only proven
+secure in the fixed difficulty model. Follow up works have improved their
+efficiency~\cite{superblocks} and applied them for cross-chain information
+transfers~\cite{pow-sidechains}. Additional improvements in which both
+NIPoPoW succinctness and security are achieved simultaneously are presented
+in~\cite{logspace}.
+FlyClient~\cite{flyclient} gives an alternative probabilistic construction for a
+NIPoPoW which leverages the Merkle Mountain Range data structure to create a
+longer interlink vector which can give rise to more efficient proofs.
+Through a variation of their protocol which uses Merkle Segment Trees, they
+provide a construction which might work in variable difficulty settings, but
+fall short of providing a proof which takes into account the full model and
+prove results only in expectation and not with high probability.
+Summa~\cite{summa} put forth an alternative implementation for a NIPoPoW, but
+their scheme is susceptible to an attack~\cite{summa-composability} and is not
+proven secure in the cryptographic model.

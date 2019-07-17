@@ -1,0 +1,8 @@
+\section{Construction}
+
+We adopt the superblock-based NIPoPoW construction of~\cite{logspace}. The key
+observation in our construction is that the verifier does not recalculate the
+target, but only uses the target of the genesis epoch, $T_0$. This allows the
+verifier to extract the chain with the most work.
+
+Target recalculation by the verifier is not required because... TODO
