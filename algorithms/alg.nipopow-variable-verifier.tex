@@ -10,9 +10,10 @@
             \Let{(\chi, \ell, \mathcal{D})}{\textsf{Dissolve}_{m,k}(\Pi)}
             \Let{(\chi', \ell', \mathcal{D'})}{\textsf{Dissolve}_{m,k}(\Pi')}
             \Let{b}{(\Pi \cap \Pi')[-1]}
-            \Let{\mu}{\max\{\mu: b \in \mathcal{D}[\mu]\}}
-            \Let{\mu'}{\max\{\mu: b \in \mathcal{D}'[\mu]\}}
-            \If{$|\mathcal{D}'[\mu']\{b{:}\}| > |\mathcal{D}[\mu]\{b:\}|$}
+            \Let{\mu}{\min\{\mu: b \in \mathcal{D}[\mu]\}}
+            \Let{\mu'}{\min\{\mu: b \in \mathcal{D}'[\mu]\}}
+            \Let{\mu_c}{\max\{\mu, \mu'\}}
+            \If{$|\mathcal{D}'[\mu']\{b{:}\}\upchain^{\mu_c}| > |\mathcal{D}[\mu]\{b{:}\}\upchain^{\mu_c}|$}
               \State\Return{$\Pi'$}
             \EndIf
             \State\Return{$\Pi$}
