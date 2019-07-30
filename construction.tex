@@ -3,7 +3,14 @@
 We adopt the superblock-based NIPoPoW construction of~\cite{logspace}. The key
 observation in our construction is that the verifier does not recalculate the
 target, but only uses the target of the genesis epoch, $T_0$. This allows the
-verifier to extract the chain with the most work.
+verifier to extract the chain with the most work. That is, we define the upchain operator as follows:
+
+\begin{definition}[Upchain]
+  Let $\chain$ be a chain and $\mu \in \mathbb{N}$.
+  Define the \emph{upchain} $\chain\upchain^\mu$ of $\chain$ to be the
+  subchain $\{B \in \chain: H(B) \leq 2^{-\mu} T_0\}$ where
+  $T_0$ is the genesis target.
+\end{definition}
 
 Target recalculation by the verifier is not required because... TODO
 
